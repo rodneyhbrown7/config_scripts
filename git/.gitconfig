@@ -1,0 +1,41 @@
+[pull]
+	rebase = true
+[push]
+	default = simple
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+  conflictstyle = diff3
+
+#  Values enable/disable color for the indicated element
+# auto = true if terminal
+# true = enable
+# false = disable
+# always = true everywhere
+#
+[color]
+  ui = auto
+  branch = auto
+  status = auto
+  showbranch = auto
+  dif = auto
+
+# Collors for the branch command
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+# Colors used for the diff command
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+# Colors used for the status command
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
