@@ -3,9 +3,10 @@
 protected_branch='master'
 current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
-if [ $protected_branc = $current_branch ]
+echo $current_branch
+if [ $protected_branch = $current_branch ]
   then
-  read -p "You're about to push master, is that what you want? Probably not"
+  read -p "You're about to push master, is that what you want? Probably not. "
   echo
   if echo $REPLY | grep -E '^[Yy]$' > /dev/null
     then
