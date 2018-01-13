@@ -22,4 +22,4 @@ alias tree="tree -L 3"
 alias ltree="tree -DhQpu --du -L 3"
 alias vi="vim"
 alias find=find_file_in
-
+alias repeat="fc -s"
