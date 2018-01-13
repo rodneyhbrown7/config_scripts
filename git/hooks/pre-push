@@ -1,0 +1,17 @@
+#!/bin/bash
+
+protected_branch='master'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+if [ $protected_branc = $current_branch ]
+  then
+  read -p "You're about to push master, is that what you want? Probably not"
+  echo
+  if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+    then
+    exit 0   # go ahead then
+    fi
+    exit 1    #wise choice, no pushie for you!
+else
+  exit 0     # if you must
+  fi
